@@ -163,12 +163,16 @@ In the CLI:
 > ROVER.TORQUE.500
 
 Click _Run_
-Press _W_
-See what they didn't want you to see
-The truth is out there
-It's really not that interesting
 
-Dedicated to Cedric
+Press _W_
+
+See what they didn't want you to see.
+
+The truth is out there.
+
+It's really not that interesting.
+
+Dedicated to Cedric <3
 
 ## Other Credits, Minutiae
 
