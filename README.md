@@ -2,21 +2,15 @@
 
 A web-based lunar rover simulation using [Babylon.js](https://www.babylonjs.com/), [Cannon.js](https://github.com/schteppe/cannon.js), node.js, and webpack.
 
-This markdown edited in [stackedit.io](stackedit.io).
-
 ## Installing and Running
 
-You will need to have npm (via node.js) [installed](https://www.npmjs.com/get-npm) to grab required packages and to run locally.
+Assuming you have docker compose installed, simply type in 
 
-Once npm is installed, clone this repo, navigate to the local repo and type `npm install` to get all specified dependencies.
+`docker compose up app`
 
-Assuming your install was a success, you can now run `npx webpack-cli serve` to spin up the webpack dev server on port 8080. Webpack first needs to compile the JS, but when it's ready, navigate to `localhost:8080` in a browser to view the sim. If you'd like to run the sim on a different port, run `npx webpack-cli serve --port yourportnumber`
+This should then be running for you at [localhost:8080](localhost:8080) after the build finishes.
 
-Note: the webpack dev server will attempt to recompile if you change the codebase as it runs. This project is only configured for development, not production ready deployment, whatever that might mean for you.
-
-Final note: webpack is going to complain (if you have a dev console open in your browser) about the size of the entrypoint file; there's _some_ additional optimization that can be done here, but the compiled result of the Babylon.js and Cannon.js libraries I used (after limiting imports and tree-shaking) will be well over webpack's reccomended entrypoint limits so long as there are collisions to simulate and meshes to extrude. Oh well. It still performs pretty well at baseline.
-
-It would probably make sense to put this in a Docker container, which I'll get around to eventually.
+Run `docker compose down` when you are finished.
 
 ## The Simulation
 

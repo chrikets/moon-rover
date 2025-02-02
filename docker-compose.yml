@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  dev:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - WEBPACK_DEV_SERVER_HOST=0.0.0.0
+      # Handle open SSL error of some kind
+      - NODE_OPTIONS=--openssl-legacy-provider
+    command: npx webpack-cli serve --host 0.0.0.0
